@@ -1,20 +1,20 @@
 const router = require('express').Router();
+const withAuth = require('../utils/auth');
 const { User, BlogPost } = require('../models');
-//withauth
 
-//GET all blog posts for homepage 
-//************************** add withauth situation [miniproject homeroutes] */
-router.get('/', async (req, res) => {
+//GET users to verify login
+router.get('/', withAuth, async (req, res) => {
     try {
-        const blogPostData = await BlogPost.findAll({
-            
+        const userData = await User.findAll({
+            attributes: { exclude: ['password'] },
+            order: [['name', 'ASC']],
         });
 
-        const blogPosts = blogPostData.map((post) => 
+        const users = userData.map((post) => 
             post.get({ plain: true })
         );
         res.render('homepage', {
-            blogPosts,
+            users,
             loggedIn: req.session.loggedIn,
         });
     } catch (err) {
@@ -22,14 +22,14 @@ router.get('/', async (req, res) => {
     }
 });
 
-//GET one blogPost
-router.get('posts/:id', async (req, res) => {
-    try {
-        const blogPostData = await BlogPost.findByPk(req.params.id, {
-            
-        });
-    } catch (err) {
-        res.status(500).json(err);
+//redirect or login
+router.get('/login', async (req, res) => {
+    if(req.session.loggedIn) {
+        res.redirect('/');
+        return;
     }
 
-})
+    res.render('login');
+});
+
+module.exports = router;
