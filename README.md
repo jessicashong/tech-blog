@@ -6,7 +6,7 @@ This application is a tech blog where users can create an account and post or co
 
 
 ## Visual Presentation
-![screenshot of tech blog](./public/images/)
+![screenshot of tech blog](./public/images/jsh-tech-blog.herokuapp.com_login.png)
 
 ## Links 
 GitHub Repo: [https://github.com/jessicashong/tech-blog](https://github.com/jessicashong/tech-blog)
