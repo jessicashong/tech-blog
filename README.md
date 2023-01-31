@@ -11,4 +11,4 @@ This application is a tech blog where users can create an account and post or co
 ## Links 
 GitHub Repo: [https://github.com/jessicashong/tech-blog](https://github.com/jessicashong/tech-blog)
 
-Heroku Live App: [https://note-taker-jesshong.herokuapp.com/](https://note-taker-jesshong.herokuapp.com/)
+Heroku Live App: [https://jsh-tech-blog.herokuapp.com/](https://jsh-tech-blog.herokuapp.com/ )
