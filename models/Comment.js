@@ -21,7 +21,7 @@ Comment.init(
             allowNull: false,
             defaultValue: DataTypes.NOW,
         },
-        username: {
+        user_username: {
             type: DataTypes.STRING,
             references: {
                 model: 'user',

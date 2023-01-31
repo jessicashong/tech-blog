@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Update Portfolio",
+        "content": "Make an updated portfolio with most recent projects and about me section.",
+        "createdAt": "2023-01-26 21:00:00",
+        "user_id": 1 
+    },
+    {
+        "title": "Commissioned Art",
+        "content": "Hang my paintings in a gallery.",
+        "createdAt": "2023-01-26 21:00:00",
+        "user_id": 2 
+    },
+    {
+        "title": "Lose Weight!",
+        "content": "Lose 10 more pounds by the end of bootcamp.",
+        "createdAt": "2023-01-26 21:00:00",
+        "user_id": 3 
+    }
+]
